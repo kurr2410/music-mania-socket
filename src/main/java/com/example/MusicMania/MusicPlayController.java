@@ -1,6 +1,7 @@
 package com.example.MusicMania;
 
 import com.example.MusicMania.models.PlayMessage;
+import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;

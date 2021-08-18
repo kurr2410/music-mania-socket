@@ -1,24 +1,52 @@
-let btn1=document.getElementById("btn1");
-let btn2=document.getElementById("btn2");
-let btn3=document.getElementById("btn3");
-let btn4=document.getElementById("btn4");
+//let btn1=document.getElementById("btn1");
+//let btn2=document.getElementById("btn2");
+//let btn3=document.getElementById("btn3");
+//let btn4=document.getElementById("btn4");
+//
+//
+//btn1.onclick=function(){
+//client.send(
+//            '/app/play',
+//            {},
+//            JSON.stringify({instrument: 'aud1'})
+//        )
+//}
+//btn2.onclick=function(){
+//client.send(
+//            '/app/play',
+//            {},
+//            JSON.stringify({instrument: 'aud2'})
+//        )
+//}
+//
+//btn3.onclick=function(){
+//client.send(
+//            '/app/play',
+//            {},
+//            JSON.stringify({instrument: 'aud1'})
+//        )
+//}
+//
+// btn4.onclick=function(){
+//client.send(
+//            '/app/play',
+//            {},
+//            JSON.stringify({instrument: 'aud2'})
+//        )
+//}
 
-let audio1=()=>document.getElementById("audio1");
-let audio2=()=>document.getElementById("audio2");
 
-btn1.onclick=function(){
-audio1().play();
-}
-btn2.onclick=function(){
-audio2().play();
-}
-btn3.onclick=function(){
- audio1.play();
- }
- btn4.onclick=function(){
- audio2.play();
- }
+;([1, 2, 3, 4]).forEach(id => {
+    document.getElementById('btn' + id).onclick = function () {
 
+        client.send(
+            '/app/play',
+            {},
+            JSON.stringify({instrument: 'aud'+id})
+        )
+
+    }
+})
 let sock;
 let client;
 

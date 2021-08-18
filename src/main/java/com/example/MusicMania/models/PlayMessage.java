@@ -2,9 +2,11 @@ package com.example.MusicMania.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Getter
+@ToString
 public class PlayMessage {
-    private String instrument;
+    public String instrument;
 }
